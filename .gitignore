@@ -131,10 +131,5 @@ dmypy.json
 
 # files
 *data.csv
-*F4_imputed_MLP_quick_mean.csv
-*data_transformed.csv
-*data_no_outliers.csv
-*F4_transformed.csv
-*F4data.csv
-*data_removed.csv
-*.json
+*.csv
+*.pkl
