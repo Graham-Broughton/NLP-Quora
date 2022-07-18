@@ -15,6 +15,10 @@ Out of the 404290 question pairs there were 537933 unique questions, 111780 repe
 ![Repeated Questions Bar Chart](src/images/Quora_unique.png)
 The log-scaled histogram of repeated questions, seen below, shows the vast majority of questions are either not repeated, or repeated a few times, with an extremely long tail.
 ![Repeated Questions Log-Histo](src/images/Quora_freq.png)
-To further explore characteristics of the questions I did basic feature engineering which involved calculating: character length, difference of character length, absolute difference of character length, number of words, number of common words, ratio of common words, frequency of questions, frequency of both questions, absolute difference of frequencies and the sets of characters used. The following are violin and kernel density plots of the more interesting engineered features:
+There were also three NaN values which I chose to impute with an empty string. This way, if Quora does not have a safeguard against empty queries, the model will be able to handle them.
+
+## Feature Engineering
+I started off with basic engineering based on the characteristics of the questions, then moved towards advanced tools including: the FuzzyWuzzy library, TF-idf Vectorizer and Truncated SVD, word vector embeddings and an assortment of distances between those embeddings. My basic engineering consisted of calculating: character length, difference of character length, absolute difference of character length, number of words, number of common words, ratio of common words, frequency of questions, frequency of both questions, absolute difference of frequencies and the sets of characters used. As seen in the violin and kernel plots, the number and ratio of common words will likely be an effective feature due to the difference of values between classes.
 ![Violin plots](src/images/Quora_violin.png)
 ![Kernel Plots](src/images/Quora_kernel.png)
+FuzzyWuzzy is a python library for string matching which uses Levenshtein distance to compare the differences between the strings. Essentially it calculates the number of single character edits the two strings differ from one another. 
