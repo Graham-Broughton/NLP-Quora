@@ -1,12 +1,12 @@
 # NLP with Quora Questions
 ## Overview
-In this repository I explore different methods of Natural Language Processing on the Quora Questions database. The goal is to determine if two questions are identical. This is an important feature for a business like Quora where they have millions of users: if they can accurately determine if questions are similar then they can reduce their overhead by using a cached answer instead of accessing a database.
+In this repository I explore different methods of Natural Language Processing on the Quora Questions database. The goal is to determine if two questions are identical given the questions, a unique question identifier and the duplicate label. This is an important feature for a business like Quora where they have millions of users: if they can accurately determine if questions are similar then they can reduce their overhead by using a cached answer instead of accessing a database.
 
 ## Table of Contents
-  1. [**EDA**](https://github.com/Graham-Broughton/NLP-Quora/edit/master/README.md#EDA)
-  2. [**Feature Engineering**](https://github.com/Graham-Broughton/NLP-Quora/edit/master/README.md#FeatureEngineering)
-  3. [**Baseline Model - Logistic Regression**](https://github.com/Graham-Broughton/NLP-Quora/edit/master/README.md#Logistic-Regression-Baseline-Model)
-  4. [**XGBoost**](https://github.com/Graham-Broughton/NLP-Quora/edit/master/README.md#XGBoost)
+  1. [**EDA**](https://github.com/Graham-Broughton/NLP-Quora#EDA)
+  2. [**Feature Engineering**](https://github.com/Graham-Broughton/NLP-Quora#Feature-Engineering)
+  3. [**Baseline Model - Logistic Regression**](https://github.com/Graham-Broughton/NLP-Quora#Logistic-Regression-Baseline-Model)
+  4. [**XGBoost**](https://github.com/Graham-Broughton/NLP-Quora#XGBoost-Classifier)
 
 ## EDA
 For my exploratory data analysis I analyzed the target distribution, various features of the questions and target distribution among engineered question features. I discovered a slight class imbalance, shown below, and proceeded with baseline models without any correction. 
@@ -43,9 +43,9 @@ Word2Vec refers to another method of vectorizing text that uses a neural net to 
 ## Logistic Regression Baseline Model
 Using a C value of 5 and all engineered features a logistic regression model obtained an accuracy of 79% and the following confusion matrix:
 <p align="center" width="100%">
-    <img width="50%" src="src/images/xgb_confusion.png"> 
+    <img width="50%" src="src/images/lr_cm.png"> 
 </p>
-
+I would call this a sucessfull baseline model, let's see how XGBoost will improve the scores.
 
 ## XGBoost Classifier
 An XGBoost Classifier obtained 84% accuracy and the following confusion matrix using the following hyperparameters and all engineered features: num_boost_rounds=5000, eta=0.02, max_depth=4, early_stopping_rounds=100.
