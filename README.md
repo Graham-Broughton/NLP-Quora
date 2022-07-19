@@ -11,10 +11,13 @@ In this repository I explore different methods of Natural Language Processing on
 ## EDA
 For my exploratory data analysis I analyzed the target distribution, various features of the questions and target distribution among engineered question features. I discovered a slight class imbalance, shown below, and proceeded with baseline models without any correction. 
 ![target distribution pie chart](src/images/Quora_dupes.png)
+
 Out of the 404290 question pairs there were 537933 unique questions, 111780 repeated questions with a maximum repeat of 157. When seperated by target, there were more repeated questions in the duplicate class than there should have been according to the class distribution (44% instead of 37%).
 ![Repeated Questions Bar Chart](src/images/Quora_unique.png)
+
 The log-scaled histogram of repeated questions, seen below, shows the vast majority of questions are either not repeated, or repeated a few times, with an extremely long tail.
 ![Repeated Questions Log-Histo](src/images/Quora_freq.png)
+
 There were also three NaN values which I chose to impute with an empty string. This way, if Quora does not have a safeguard against empty queries, the model will be able to handle them.
 
 ## Feature Engineering
