@@ -46,6 +46,10 @@ Using a C value of 5 and all features
 ## XGBoost Classifier
 The following confusion matrix was obtained using the following hyperparameters: num_boost_rounds=5000, eta=0.02, max_depth=4, early_stopping_rounds=100.
 <p align="center" width="100%">
-    <img width="60%" src="src/images/xgb_confusion.png"> 
+    <img width="50%" src="src/images/xgb_confusion.png"> 
 </p>
+Below is the feature importance plot based on weights for thew top 20 features. I am surprised how importance the question frequency is, I could further improve the model by engineering more features based off this info eg. frequency ratio, freq difference. The same goes for question len and num words, I would have thought the more advanced feature engineering would be superior.
 
+![xgb feature importances](src/images/xgb_features.png)
+
+Lastly, if Quora wants to focus the model on increasing precision or recall, we can use this discrimination threshold plot to determine the optimal value to maximize either of these values.
