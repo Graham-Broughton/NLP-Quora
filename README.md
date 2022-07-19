@@ -3,7 +3,7 @@
 In this repository I explore different methods of Natural Language Processing on the Quora Questions database. The goal is to determine if two questions are identical given the questions, a unique question identifier and the duplicate label. This is an important feature for a business like Quora where they have millions of users: if they can accurately determine if questions are similar then they can reduce their overhead by using a cached answer instead of accessing a database.
 
 ## Table of Contents
-  1. [**EDA**](https://github.com/Graham-Broughton/NLP-Quora/edit/master/README.md#EDA)
+  1. [**EDA**](https://github.com/Graham-Broughton/NLP-Quora#EDA)
   2. [**Feature Engineering**](https://github.com/Graham-Broughton/NLP-Quora/edit/master/README.md#FeatureEngineering)
   3. [**Baseline Model - Logistic Regression**](https://github.com/Graham-Broughton/NLP-Quora/edit/master/README.md#Logistic-Regression-Baseline-Model)
   4. [**XGBoost**](https://github.com/Graham-Broughton/NLP-Quora/edit/master/README.md#XGBoost)
