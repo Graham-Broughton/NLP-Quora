@@ -41,4 +41,8 @@ Term Frequency-Inverse Document Frequency (TF-idf) is another method of transfor
 Word2Vec refers to another method of vectorizing text that uses a neural net to create a vector for each word in a corpus based on the relationships between words. Since it is a time consuming process to train a word2vec model with enough data to obtain good results, I used GoogleNews vector negative 300 which is a list of word embeddings obtained from trainign the model on ~100 billion words from GoogleNews. For each sentence in each question feature, I created an array of word embeddings and took the average of squares of it. Then used these sentence vectors to calculate various distance metrics and  concatenated the sentence vectors to form another feature group containing 600 dimensions. Lastly, I used the word2vec model to calculate the word movers distance between the two questions.
 
 ## Logistic Regression Baseline Model
+Using a C value of 5 and all features
+
+## XGBoost Classifier
+The following confusion matrix was obtained using the following hyperparameters: num_boost_rounds=5000, eta=0.02, max_depth=4, early_stopping_rounds=100.
 
