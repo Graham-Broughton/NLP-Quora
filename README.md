@@ -43,9 +43,9 @@ Word2Vec refers to another method of vectorizing text that uses a neural net to 
 ## Logistic Regression Baseline Model
 Using a C value of 5 and all engineered features a logistic regression model obtained an accuracy of 79% and the following confusion matrix:
 <p align="center" width="100%">
-    <img width="50%" src="src/images/xgb_confusion.png"> 
+    <img width="50%" src="src/images/lr_cm.png"> 
 </p>
-
+I would call this a sucessfull baseline model, let's see how XGBoost will improve the scores.
 
 ## XGBoost Classifier
 An XGBoost Classifier obtained 84% accuracy and the following confusion matrix using the following hyperparameters and all engineered features: num_boost_rounds=5000, eta=0.02, max_depth=4, early_stopping_rounds=100.
