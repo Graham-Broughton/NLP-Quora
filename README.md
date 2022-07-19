@@ -4,9 +4,9 @@ In this repository I explore different methods of Natural Language Processing on
 
 ## Table of Contents
   1. [**EDA**](https://github.com/Graham-Broughton/NLP-Quora#EDA)
-  2. [**Feature Engineering**](https://github.com/Graham-Broughton/NLP-Quora/README.md#FeatureEngineering)
+  2. [**Feature Engineering**](https://github.com/Graham-Broughton/NLP-Quora#FeatureEngineering)
   3. [**Baseline Model - Logistic Regression**](https://github.com/Graham-Broughton/NLP-Quora#Logistic-Regression-Baseline-Model)
-  4. [**XGBoost**](https://github.com/Graham-Broughton/NLP-Quora/README.md#XGBoost)
+  4. [**XGBoost**](https://github.com/Graham-Broughton/NLP-Quora#XGBoost)
 
 ## EDA
 For my exploratory data analysis I analyzed the target distribution, various features of the questions and target distribution among engineered question features. I discovered a slight class imbalance, shown below, and proceeded with baseline models without any correction. 
