@@ -45,5 +45,6 @@ Using a C value of 5 and all features
 
 ## XGBoost Classifier
 The following confusion matrix was obtained using the following hyperparameters: num_boost_rounds=5000, eta=0.02, max_depth=4, early_stopping_rounds=100.
+
 ![xgboost confusion matrix](src/images/xgb_confusion.png)
 
