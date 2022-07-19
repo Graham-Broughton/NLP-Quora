@@ -54,3 +54,5 @@ Below is the feature importance plot based on weights for thew top 20 features. 
 </p>
 
 Lastly, if Quora wants to focus the model on increasing precision or recall, we can use this discrimination threshold plot to determine the optimal value to maximize either of these values.
+
+![xgb thresh](
